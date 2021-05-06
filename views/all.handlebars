@@ -1,0 +1,20 @@
+<div class="animal-container">
+  <div class="card-header col-md-10">
+    <h2>
+      &#127869 Animals
+    </h2>
+  </div>
+  <!-- For each dish in the array of dish objects, the following <div> will be rendered. -->
+  {{#each animals as |animal|}}
+    <div class="dish col-md-5">
+      <!-- We use dish.id instead of <od> and <li> elements. -->
+      <p>
+        {{animal.id}}.
+        {{animal.animal_name}}
+      </p>
+    </div>
+    <div class="col-md-7">
+      <p></p>
+    </div>
+  {{/each}}
+</div>
