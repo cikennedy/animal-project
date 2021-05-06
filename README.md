@@ -1,4 +1,4 @@
-# animal-project
+# Don't Hunt Me
 
 ## Description/Proposal
 
