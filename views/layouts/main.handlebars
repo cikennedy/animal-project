@@ -11,13 +11,43 @@
       <h1>
         &#127881 Animal Project &#127881
       </h1>
-    </header>
-      <main class="container container-fluid mt-5">
-        {{{ body }}}
-      </main>
-  </div>
-  </body>
+      <h1>
+        User Registry
+      </h1>
+      <!-- Only display the logout button if the user is logged in -->
+      {{#if logged_in}}
+      <nav>
+        <button class="btn" id="logout">logout</button>
+      </nav>
+      {{/if}}
 
-</html>
+
+    </header>
+
+    <nav>
+      <a href="/">Home</a>
+    </nav>
+
+    <main class="container container-fluid mt-5">
+      <aside>
+        <h2>Enjoy the galleries!</h2>
+      </aside>
+
+      <div class="gallery">
+        {{{body}}}
+      </div>
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <!-- Only include the logout script if the user is logged in -->
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
+  </div>
+</body>
 
 </html>
