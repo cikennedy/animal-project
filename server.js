@@ -10,8 +10,18 @@ const sequelize = require('./config/connection');
 
 const hbs = exphbs.create({});
 
+// Set up sessions
+const sess = {
+  secret: 'Super secret secret',
+  resave: false,
+  saveUninitialized: false,
+};
+
+
+
 // Sets up the Express App
 const app = express();
+app.use(session(sess));
 const PORT = process.env.PORT || 3001;
 
 // Set Handlebars as the default template engine.
