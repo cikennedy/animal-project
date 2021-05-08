@@ -1,4 +1,4 @@
-# Don't Hunt Me
+# Project 2 
 
 ## Description/Proposal
 
