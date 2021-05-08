@@ -1,6 +1,6 @@
 const { Post } = require('../models')
 
-const userData = [
+const postData = [
   {
     "postTitle": "Test",
     "postContent": "This is a test",
