@@ -35,11 +35,6 @@ User.init(
         len: [8],
       },
     },
-    phone: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      unique: true,
-    },
   },
   {
     hooks: {

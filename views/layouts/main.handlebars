@@ -1,4 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost and Found</title>
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header>
+    <h1>
+      Lost and Found
+    </h1>
+    {{#if loggedIn}}
+    <nav>
+        <a href="/"><button>Lost and Found</button></a>
+        <a href="/dashboard"><button>Dashboard</button></a>
+        <a href="/about"><button id="about">About</button></a>
+        <a href="/contact"><button id="contact">Contact</button></a>
+        <button class="btn" id="logout">Log Out</button>
+        {{else}}
+        <a href="/"><button>Home</button></a>
+        <a href="/login"><button id="login">Log In</button></a>
+        <a href="/about"><button id="about">About</button></a>
+        <a href="/contact"><button id="contact">Contact</button></a>
+    </nav>
+    {{/if}}
+  </header>
+
+  <main>
+    {{{body}}}
+  </main>
+
+  <!-- Only include the logout script if the user is logged in -->
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
+
+
+{{!-- <head>
   <meta charset="UTF-8">
   <title>Project 2</title>
   <link rel="stylesheet" href="/css/jass.css">
@@ -55,4 +99,4 @@
   </div>
 </body>
 
-</html>
+</html> --}}
