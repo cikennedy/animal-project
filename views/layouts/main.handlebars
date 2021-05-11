@@ -36,12 +36,6 @@
     {{{body}}}
   </main>
 
-  <footer>
-    {{#if loggedOut}}
-      <a class="new-post-btn" href="/dashboard/login">+ New Post</a>
-      {{/if}}
-  </footer>
-
   <!-- Only include the logout script if the user is logged in -->
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
