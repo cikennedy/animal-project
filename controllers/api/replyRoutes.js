@@ -3,7 +3,7 @@ const { Reply } = require('../../models');
 
 // Get all comments
 router.get('/', (req, res) => {
-    Comment.findAll({
+    Reply.findAll({
         attributes: [
             'id',
             'comment_content',
@@ -18,3 +18,5 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
     });
 });
+
+module.exports = router;
