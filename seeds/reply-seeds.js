@@ -3,7 +3,7 @@ const { Reply } = require('../models')
 const replyData = [
   {
     reply: "Test",
-    post_id: "This is a test",
+    post_id: "1",
   },
 ];
 
