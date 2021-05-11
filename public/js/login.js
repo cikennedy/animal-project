@@ -18,7 +18,9 @@ async function loginFormHandler(event) {
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert(response.statusText);
+      // alert(response.statusText);
+      alert("Ooops, chcek your Email / Password and try again!");
+
     }
   }
 };
