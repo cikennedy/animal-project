@@ -35,12 +35,15 @@ User.init(
         len: [8],
       },
     },
+    phone: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      unique: true,
+    },
   },
   {
     hooks: {
       beforeCreate: async (newUserData) => {
-
-        console.log('HIT THE BEFORE CREATE!!!!', newUserData)
       
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
