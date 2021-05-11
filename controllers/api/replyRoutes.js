@@ -6,9 +6,8 @@ router.get('/', (req, res) => {
     Reply.findAll({
         attributes: [
             'id',
-            'comment_content',
+            'reply',
             'post_id',
-            'user_id',
             'created_at'
         ],
     })

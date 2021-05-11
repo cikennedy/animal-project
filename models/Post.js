@@ -13,15 +13,15 @@ Post.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        postTitle: {
+        post_title: {
             type:DataTypes.STRING,
             allowNull: false,
         },
-        postContent: {
+        post_content: {
             type: DataTypes.TEXT,
             allowNull: false
         },
-        postPhoto : {
+        post_photo : {
             type: DataTypes.STRING,
             allowNull: true,
         },

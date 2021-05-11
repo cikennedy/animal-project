@@ -1,3 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Blog</title>
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header>
+    <h1>
+      The Tech Blog
+    </h1>
+    <!-- Only display the logout button if the user is logged in -->
+    {{#if loggedIn}}
+    <nav>
+        <a href="/"><button>Home</button></a>
+        <a href="/dashboard"><button>Dashboard</button></a>
+        <button class="btn" id="logout">Log Out</button>
+        {{else}}
+        <!-- Links for if the user is not logged in. Clicking on the dashboard will
+        redirect to the login page as -->
+        <a href="/"><button>Home</button></a>
+        <a href="/login"><button>Dashboard</button></a>
+        <a href="/login"><button id="login">Log In</button></a>
+    </nav>
+    {{/if}}
+  </header>
+
+  <main>
+    {{{body}}}
+  </main>
+
+  <footer>
+    {{#if loggedOut}}
+      <a class="new-post-btn" href="/dashboard/login">+ New Post</a>
+      {{/if}}
+  </footer>
+
+  <!-- Only include the logout script if the user is logged in -->
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
+
+
+{{!-- <!DOCTYPE html>
+<html lang="en">
+
 <head>
   <title>Find your Animal</title>
   <meta charset="UTF-8">
@@ -65,4 +118,4 @@
   </div>
 </body>
 
-</html>
+</html> --}}

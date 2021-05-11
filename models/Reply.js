@@ -25,9 +25,6 @@ Reply.init(
     },
     {
     sequelize,
-    // Check to see if timestamps: true needs to be added 
-    // as the comment's date and time need to be listed 
-    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: 'reply',
