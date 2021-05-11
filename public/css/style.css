@@ -18,11 +18,15 @@
     min-height: 100vh;
     justify-content: flex-start;
     background-color: var(--quatrinary);
+    /* background-image: url("../public/images/animals_bg.PNG"); */
+    background-position: center top;
+
   }
   
   header {
     padding: 40px;
     text-align: center;
+    background-image: url("../public/images/animals_bg.PNG");
     background: var(--primary);
     color: var(--secondary);
     border-bottom-style: solid;
@@ -37,6 +41,29 @@
   nav {
     display: flex;
     background-color: var(--secondary);
+  }
+
+  nav a {
+    color: var(--light);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  nav a:hover {
+    color: var(--secondary);
+    background-color: var(--dark);
+  }
+
+ #logout, #login {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 100%;
+    transition: color 0.1s;
+    margin-left: 16px;
   }
 
 

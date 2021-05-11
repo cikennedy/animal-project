@@ -1,6 +1,7 @@
 <section class="dashboard-view">
 
     <section class="create-post">
+<<<<<<< HEAD
         <h1>Create New Post</h1>
         <button id="upload_widget" class="cloudinary-button">Upload files</button>
 
@@ -26,31 +27,47 @@ document.getElementById("upload_widget").addEventListener("click", function(){
             <div>
                 <label for="post-name">Name</label>
                 <input type="text" name="post-title" id="post-title"/>
+=======
+        <h1>Enter new Profile</h1>
+        <form class="create-post-form">
+            <div>
+                <label for="post-title">Who did you lose?</label>
+                <input type="text" name="post-title" id="post-title" />
+>>>>>>> auth_1
             </div>
             <div>
-                <label for="post-content">Description</label>
-                <input type="text" name="post-description" id="post-description"/>
+                <label for="post-location">Location last seen:</label>
+                <input type="text" name="post-description" id="post-description" />
             </div>
-            <div>
-                <label for="post-content">Content</label>
-                <input type="text" name="post-content" id="post-content"/>
-            </div>
-            <button type="submit" class="btn">Post</button>
-        </form>
-        </section>
 
-        <div class="list-blog-posts">
-            {{#if posts.length}}
-            <h1>Your Posts</h1>
-            <ol>
-                {{#each posts as |post|}}
-                    {{> post-in-dashboard post}}
-                {{/each}}
-            </ol>
-            {{/if}}
-        </div>
+            <div>
+                <label for="post-content">Descripe your firend</label>
+                <input type="text" name="post-description" id="post-description" />
+            </div>
+            <div>
+                <label for="post-image">Post and picture</label>
+                <input type="text" name="post-content" id="post-content" />
+            </div>
+<<<<<<< HEAD
+            <button type="submit" class="btn">Post</button>
+=======
+            <button type="submit" class="btn">Post Animal</button>
+>>>>>>> auth_1
+        </form>
+    </section>
+
+    <div class="list-blog-posts">
+        {{#if posts.length}}
+        <h1>Your Profile</h1>
+        <ol>
+            {{#each posts as |post|}}
+            {{> post-in-dashboard post}}
+            {{/each}}
+        </ol>
+        {{/if}}
+    </div>
 
 </section>
 
-{{!-- 
+{{!--
 <script src="/js/create-post.js"></script> --}}
