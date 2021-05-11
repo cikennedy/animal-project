@@ -2,15 +2,19 @@
 
 ## Description/Proposal
 
+Home Page: 
+
+* Search bar (will search our database that is created from user input)
+    * Parameters: Type of animal, age, color, weight, description 
+
+* List of missing animal posts with images, description, and contact information 
+
+* Button with a reply to the owner 
 
 
 ## User Story
 
 
-## APIs Used
 
-[IUCN Redlist](https://apiv3.iucnredlist.org/api/v3/docs)
-
-[GBIF](https://www.gbif.org/developer/summary)
 
 

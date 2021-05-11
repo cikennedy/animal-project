@@ -3,10 +3,8 @@ const { User } = require('../../models');
 
 router.post('/login', async (req, res) => {
   try {
-    console.log('We hit the login route!!!!!!', req.body)
     // Find the user who matches the posted e-mail address
     const userData = await User.findOne({ where: { email: req.body.email } });
-    console.log('did wwe find a user ????', userData)
 
     if (!userData) {
       res
@@ -33,7 +31,6 @@ router.post('/login', async (req, res) => {
       res.json({ user: userData, message: 'You are now logged in!' });
     });
 
-    //res.send('testinggg')
   } catch (err) {
     res.status(400).json(err);
   }
