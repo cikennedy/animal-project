@@ -3,7 +3,6 @@ const { User, Post, Reply } = require('../models');
 
 // Get all lost and found posts
 router.get('/', (req, res) => {
-  console.log(req.session);
   Post.findAll({
       // Order lost and found from newest post to oldest
       order: [[ 'created_at', 'DESC']],
@@ -19,11 +18,9 @@ router.get('/', (req, res) => {
       include: [
           {
               model: User,
-              attributes: [
-                  'username'
-              ]
+              attributes: ['name']
           },
-          // Include all comments 
+          // Include all replies 
           {
               model: Reply,
               attributes: [
@@ -76,7 +73,6 @@ router.get('/post/:id', (req, res) => {
                   'id',
                   'reply',
                   'post_id',
-                  'user_id',
                   'created_at'
               ],
           }
