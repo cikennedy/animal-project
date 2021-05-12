@@ -28,7 +28,8 @@ router.get('/:id', (req, res) => {
                     'id',
                     'post_title',
                     'post_content',
-                    'post_photo'
+                    'post_photo',
+                    'created_at'
                 ],
             },
             {
@@ -72,7 +73,7 @@ router.post('/', (req, res) => {
                 req.session.user_id = dbUserData.id;
                 req.session.email = dbUserData.email;
                 req.session.name = dbUserData.name;
-                req.session.logged_in = true;
+                req.session.loggedIn = true;
                 res.json(dbUserData);
             });
         })
@@ -106,7 +107,7 @@ router.post('/login', (req, res) => {
                 req.session.user_id = dbUserData.id;
                 req.session.email = dbUserData.email;
                 req.session.name = dbUserData.name;
-                req.session.logged_in = true;
+                req.session.loggedIn = true;
 
                 res.json({ user: dbUserData, message: "You have been logged in." });
         });
@@ -115,7 +116,7 @@ router.post('/login', (req, res) => {
 
 // User logout. This is post as listed in the logout.js file 
 router.post('/logout', (req, res) => {
-    if (req.session.logged_in) {
+    if (req.session.loggedIn) {
         // Removes session variables
         req.session.destroy(() => {
             res.status(204).end();

@@ -75,7 +75,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
 
         // Use edit-post handlebars template 
         const post = dbPostData.get({ plain: true });
-        res.render('id-edit-post', {
+        res.render('edit-post', {
             post,
             loggedIn: true
         });
