@@ -52,28 +52,4 @@ sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
 
-// /* 
 
-// Cloud Name: dyz1jgp39
-// API Key: 167558493262488
-
-// Install: 
-
-// $ npm install cloudinary
-
-// Include the blow variable: 
-
-// var cloudinary = require('cloudinary').v2;;
-
-// Sample Cloudinary image upload code: 
-
-// cloudinary.uploader.upload("sample.jpg", 
-// {"crop":"limit","tags":"samples","width":3000,"height":2000}, 
-// function(result) { console.log(result) });
-
-// Sample image manipulation code: 
-// cloudinary.image("sample", 
-// {"crop":"fill","gravity":"faces","width":300,"height":200,
-// "format":"jpg"});
-
-// */

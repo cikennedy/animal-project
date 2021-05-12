@@ -1,74 +1,129 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Post, Reply } = require('../models');
 
-// Prevent non logged in users from viewing the homepage
-router.get('/', async (req, res) => {
-  try {
-    const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
-      raw: true
-    });
-    console.log(
-      'USERS from db', userData
-    )
-
-   // const users = userData.map((project) => project.get({ plain: true }));
-
-    res.render('homepage', {
-      users: userData,
-      // Pass the logged in flag to the template
-      // logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-
-router.get('/profile', async (req, res) => {
-  try {
-    const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      where: {
-        id: req.session.user_id
-      },
-      raw: true
-    });
-    console.log(
-      'One specifc user!!!!!!', userData
-    )
-
-   // const users = userData.map((project) => project.get({ plain: true }));
-
-    res.render('profile', {
-      name: userData[0].name,
-      // Pass the logged in flag to the template
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-router.get('/allusers', async (req,res) => {
-  const userData = await User.findAll({
-    attributes: { exclude: ['password'] },
-    order: [['name', 'ASC']],
-    raw: true
+// Get all lost and found posts
+router.get('/', (req, res) => {
+  console.log(req.session);
+  Post.findAll({
+      // Order lost and found from newest post to oldest
+      order: [[ 'created_at', 'DESC']],
+      // Include the below attributes from the Post table
+      attributes: [
+          'id',
+          'post_title',
+          'post_content',
+          'post_photo',
+          'created_at'
+      ],
+      // Include the user's name
+      include: [
+          {
+              model: User,
+              attributes: [
+                  'username'
+              ]
+          },
+          // Include all comments 
+          {
+              model: Reply,
+              attributes: [
+                  'id',
+                  'reply',
+                  'post_id',
+                  'created_at'
+              ],
+          },
+      ]
+  })
+  .then(dbPostData => {
+      // Create an array for the posts and pass the posts to the homepage handlebars template
+      const posts = dbPostData.map(post => post.get({ plain: true }));
+      res.render('homepage', {
+          posts, loggedIn: req.session.loggedIn
+      });
+  })
+  .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
   });
+});
 
-  res.json(userData)
-})
+// Get one blog post by id
+router.get('/post/:id', (req, res) => {
+  // Find one post by the id parameter 
+  Post.findOne({
+      where: {
+          id: req.params.id
+      },
+      // Same as the get all posts route above 
+      attributes: [
+          'id',
+          'title',
+          'post_content',
+          'created_at'
+      ],
+      include: [
+          {
+              model: User,
+              attributes: [
+                  'username'
+              ]
+          },
+          {
+              model: Comment,
+              attributes: [
+                  'id',
+                  'comment_content',
+                  'post_id',
+                  'user_id',
+                  'created_at'
+              ],
+              include: {
+                  model: User,
+                  attributes: [
+                      'username'
+                  ]
+              }
+          }
 
+      ]
+  })
+
+  // Return error if there is no blog post with the id given 
+  .then(dbPostData => {
+      if (!dbPostData) {
+          res.status(404).json({ message: 'No blog post found with the given id.'});
+          return;
+      }
+
+      // Render data to id-post handlebars template 
+      const post = dbPostData.get({ plain: true });
+      res.render('id-post', {
+          post,
+          loggedIn: req.session.loggedIn
+      });
+  })
+  .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+  });
+});
+
+// User goes to the login/signup page if not logged in
 router.get('/login', (req, res) => {
-  // If a session exists, redirect the request to the homepage
-  // if (req.session.logged_in) {
-  //   res.redirect('/');
-  //   return;
-  // }
+  // If a user is logged in, redirect the request to the homepage
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
 
   res.render('login');
 });
+
+module.exports = router;
+
+
+
+
 
 module.exports = router;
