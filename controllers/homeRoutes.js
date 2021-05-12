@@ -48,7 +48,7 @@ router.get('/', (req, res) => {
   });
 });
 
-// Get one blog post by id
+// Get one lost and found post by id
 router.get('/post/:id', (req, res) => {
   // Find one post by the id parameter 
   Post.findOne({
@@ -58,32 +58,27 @@ router.get('/post/:id', (req, res) => {
       // Same as the get all posts route above 
       attributes: [
           'id',
-          'title',
+          'post_title',
           'post_content',
+          'post_photo',
           'created_at'
       ],
       include: [
           {
               model: User,
               attributes: [
-                  'username'
+                  'name'
               ]
           },
           {
-              model: Comment,
+              model: Reply,
               attributes: [
                   'id',
-                  'comment_content',
+                  'reply',
                   'post_id',
                   'user_id',
                   'created_at'
               ],
-              include: {
-                  model: User,
-                  attributes: [
-                      'username'
-                  ]
-              }
           }
 
       ]
@@ -92,13 +87,13 @@ router.get('/post/:id', (req, res) => {
   // Return error if there is no blog post with the id given 
   .then(dbPostData => {
       if (!dbPostData) {
-          res.status(404).json({ message: 'No blog post found with the given id.'});
+          res.status(404).json({ message: 'No post found with the given id.'});
           return;
       }
 
-      // Render data to id-post handlebars template 
+      // Render data to single-animal handlebars template 
       const post = dbPostData.get({ plain: true });
-      res.render('id-post', {
+      res.render('single-animal', {
           post,
           loggedIn: req.session.loggedIn
       });
@@ -122,8 +117,3 @@ router.get('/login', (req, res) => {
 
 module.exports = router;
 
-
-
-
-
-module.exports = router;
