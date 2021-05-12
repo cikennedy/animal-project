@@ -22,34 +22,34 @@
         </script>
 
 
-        <form class="create-post-form">
-            <div>
-                <label for="post-name">Name</label>
-                <input type="text" name="post-title" id="post-title"/>
-        <h1>Enter new Profile</h1>
+
+
+    <section class="create-post">
+        <h1>Create New Post</h1>
         <form class="create-post-form">
             <div>
                 <label for="post-title">Who did you lose?</label>
-                <input type="text" name="post-title" id="post-title" />
+                <input type="text" name="post-name" id="post-name" />
             </div>
-            <div>
+            {{!-- <div>
                 <label for="post-location">Location last seen:</label>
-                <input type="text" name="post-description" id="post-description" />
-            </div>
+                <input type="text" name="post-location" id="post-location" />
+            </div> --}}
 
             <div>
                 <label for="post-content">Descripe your firend</label>
                 <input type="text" name="post-description" id="post-description" />
             </div>
-            <div>
+            {{!-- <div>
                 <label for="post-image">Post and picture</label>
                 <input type="text" name="post-content" id="post-content" />
-            </div>
-            <button type="submit" class="btn">Post Animal</button>
+            </div> --}}
+            <button type="submit" class="btn">Post Blog</button>
         </form>
-    </section>
+        </section>
 
-    <div class="list-blog-posts">
+
+    <div class="list-posts">
         {{#if posts.length}}
         <h1>Your Profile</h1>
         <ol>
@@ -62,5 +62,4 @@
 
 </section>
 
-{{!--
-<script src="/js/create-post.js"></script> --}}
+<script src="/js/new-post.js"></script>
