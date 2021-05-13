@@ -4,16 +4,16 @@ async function signupFormHandler(event) {
     event.preventDefault();
   
     // Gather the data from the form elements on the page
-    const name = document.querySelector('#name-signup').value.trim();
+    const owner_name = document.querySelector('#name-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
   
-    if (name && email && password) {
+    if (owner_name && email && password) {
       // Send the username, email, and password to the server
       const response = await fetch('/api/users', {
         method: 'POST',
         body: JSON.stringify({
-          name,
+          owner_name,
           email,
           password
         }),
