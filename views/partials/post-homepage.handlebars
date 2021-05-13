@@ -1,0 +1,18 @@
+<!-- The contents of the post card links to the post page using the post ID -->
+  <a href="/post/{{id}}" class="post-card">
+   
+  
+ <!-- The div contains the post name as the header followed by the blog post content itself -->
+    <div class="post-card-content">
+      <h2 class="post-title">{{post_title}}</h2> 
+      <p>{{post_content}}</p>
+    </div>
+
+    <div class="post-card-user-info">
+        <!-- Displays the date the blog was posted with a line break -->
+        <div class="post-date">Posted on: {{dateFormat created_at}}</div><br>
+        <!-- Displays the user who posted the blog post -->
+        <div class="post-user">By: {{user.name}}</div> 
+        <div class="post-comments">Comments: {{replies.length}}</div>
+    </div>
+  </a>

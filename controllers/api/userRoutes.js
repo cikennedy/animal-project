@@ -28,7 +28,8 @@ router.get('/:id', (req, res) => {
                     'id',
                     'post_title',
                     'post_content',
-                    'post_photo'
+                    'post_photo',
+                    'created_at'
                 ],
             },
             {
@@ -64,15 +65,15 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
         User.create({
             email: req.body.email,
-            name: req.body.name,
+            owner_name: req.body.owner_name,
             password: req.body.password
         })
         .then(dbUserData => {
             req.session.save(() => {
                 req.session.user_id = dbUserData.id;
                 req.session.email = dbUserData.email;
-                req.session.name = dbUserData.name;
-                req.session.logged_in = true;
+                req.session.owner_name = dbUserData.owner_name;
+                req.session.loggedIn = true;
                 res.json(dbUserData);
             });
         })
@@ -105,8 +106,8 @@ router.post('/login', (req, res) => {
         req.session.save(() => {
                 req.session.user_id = dbUserData.id;
                 req.session.email = dbUserData.email;
-                req.session.name = dbUserData.name;
-                req.session.logged_in = true;
+                req.session.owner_name = dbUserData.owner_name;
+                req.session.loggedIn = true;
 
                 res.json({ user: dbUserData, message: "You have been logged in." });
         });
@@ -115,7 +116,7 @@ router.post('/login', (req, res) => {
 
 // User logout. This is post as listed in the logout.js file 
 router.post('/logout', (req, res) => {
-    if (req.session.logged_in) {
+    if (req.session.loggedIn) {
         // Removes session variables
         req.session.destroy(() => {
             res.status(204).end();

@@ -26,11 +26,18 @@
   header {
     padding: 40px;
     text-align: center;
+<<<<<<< HEAD
     background-image: url("../images/animals-bg.PNG");
     /* background-image: url("./public/images/animals_bg.PNG"); */
     /* background: var(--primary); */
+=======
+    background-color: white;
+    background-image: url("../images/animals_bg.PNG");
+    background-repeat: no-repeat;
+    background-position: center top;
+    /* background-size: cover; */
+>>>>>>> main
     color: var(--secondary);
-    border-bottom-style: solid;
   }
   
   main {
