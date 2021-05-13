@@ -16,7 +16,6 @@ const seedAll = async () => {
   await seedReplies();
   console.log('\n----- REPLIES SEEDED -----\n');
 
-
   process.exit(0);
 };
 

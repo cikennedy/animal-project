@@ -27,7 +27,7 @@ Reply.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'reply',
+    modelName: 'reply'
     }
   );
 

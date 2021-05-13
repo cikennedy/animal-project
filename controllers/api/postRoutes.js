@@ -18,11 +18,11 @@ router.get('/', (req, res) => {
             {
                 model: User,
                 attributes: [
-                    'name'
+                    'owner_name'
                 ]
             },
             {
-                model: Comment,
+                model: Reply,
                 attributes: [
                     'id',
                     'reply',
@@ -57,7 +57,7 @@ router.get('/:id', (req, res) => {
             {
                 model: User,
                 attributes: [
-                    'name'
+                    'owner_name'
                 ]
             },
             {

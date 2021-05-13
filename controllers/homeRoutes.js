@@ -5,7 +5,7 @@ const { User, Post, Reply } = require('../models');
 router.get('/', (req, res) => {
   Post.findAll({
       // Order lost and found from newest post to oldest
-      order: [[ 'created_at', 'DESC']],
+      order: [[ 'created_at', 'DESC' ]],
       // Include the below attributes from the Post table
       attributes: [
           'id',
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
       include: [
           {
               model: User,
-              attributes: ['name']
+              attributes: ['owner_name']
           },
           // Include all replies 
           {
@@ -29,7 +29,7 @@ router.get('/', (req, res) => {
                   'post_id',
                   'created_at'
               ],
-          },
+          }
       ]
   })
   .then(dbPostData => {
@@ -63,9 +63,7 @@ router.get('/post/:id', (req, res) => {
       include: [
           {
               model: User,
-              attributes: [
-                  'name'
-              ]
+              attributes: ['owner_name']
           },
           {
               model: Reply,
@@ -76,7 +74,6 @@ router.get('/post/:id', (req, res) => {
                   'created_at'
               ],
           }
-
       ]
   })
 
