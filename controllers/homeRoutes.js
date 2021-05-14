@@ -47,6 +47,7 @@ router.get('/', (req, res) => {
 
 // Get one lost and found post by id
 router.get('/post/:id', (req, res) => {
+    console.log('WE HIT THE POST id route!!!')
   // Find one post by the id parameter 
   Post.findOne({
       where: {
@@ -106,6 +107,20 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+router.get('/about', (req, res) => {
+    // If a user is logged in, redirect the request to the homepage
+
+
+    res.render('about');
+});
+
+router.get('/contact', (req, res) => {
+// If a user is logged in, redirect the request to the homepage
+
+
+    res.render('contact');
 });
 
 module.exports = router;
