@@ -1,31 +1,56 @@
-<section class="login-signup-container">
-<form class="login-form">
-  <div>
-    <input type="text" id="email-login" placeholder="Email: " />
-  </div>
-  <div>
-    <input type="password" id="password-login" placeholder="Password: " />
-  </div>
-  <div>
-    <button type="submit">Log In</button>
-  </div>
-</form>
+<section class="login-form">
+<form class="wrapper" class="log-flex-container">
+  <aside>
+    <section class="log-flex-container" class="login-signup">
+      <div class="log-flex-item-left" class="login-form">
+        <div>
+          <input type="text" id="email-login" placeholder="Email: " />
+        </div>
+        <div>
+          <input type="password" id="password-login" placeholder="Password: " />
+        </div>
+        <div>
+          <button class="signupbtn" type="submit">Log In</button>
+        </div>
+      </div>
 
-<form class="signup-form">
-  <div>
-    <input type="text" id="name-signup" placeholder="Enter Name" />
+      <div class="log-flex-item-right" class="signup-form">
+        <div>
+          <input type="text" id="name-signup" placeholder="Enter Name" />
+        </div>
+        <div>
+          <input type="text" id="email-signup" placeholder="Enter Email" />
+        </div>
+        <div>
+          <input type="password" id="password-signup" placeholder="Enter Password" />
+        </div>
+        <div>
+          <button class="signupbtn" type="submit">Sign Up</button>
+        </div>
+      </div>
+    </section>
+  </aside>
+
+  <div class="log-flex-container">
+
+    <article>
+      <h1> We can post latest lost animals here</h1>
+      {{{animal}}}
+    </article>
+
+    <article>
+      <h1> We can post latest lost animals here</h1>
+
+
+    </article>
+
+
+
   </div>
-  <div>
-    <input type="text" id="email-signup" placeholder="Enter Email" />
-  </div>
-  <div>
-    <input type="password" id="password-signup" placeholder="Enter Password" />
-  </div>
-  <div>
-    <button type="submit">Sign Up</button>
-  </div>
+
 </form>
 </section>
+
 <script src="/js/login.js"></script>
 <script src="/js/signup.js"></script>
 
