@@ -1,77 +1,69 @@
 <section class="dashboard-view">
 
-    <form class="typeAnimal-form">
-    <section>
-    <section class="create-post">
-    
+    {{!-- <form class="typeAnimal-form">
+        <section class="create-post">
 
-        <div class="dropdown">
-            <button class="dropbtn" onclick="myFunction()">Dropdown
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content" id="myDropdown">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myFunction()">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
             </div>
-        </div>
+            </script>
 
-        </br>
-        </br>
-        </br>
-        </script>
+        </section>
+    </form> --}}
 
-    </section>
+    <form class="wrapper" class="log-flex-container">
+        <aside id="asidewidth">
+            {{!-- <section class="log-flex-container" class="create-post"> --}}
+                <section>
+
+                    {{!-- <h1>Enter A NEW Profile</h1> --}}
+                    <div>
+                        <div>
+                            <label id="lable" for="post-name">Name</label> </br>
+                            <input type="text" name="post-title" id="post-name" />
+                        </div>
+                        <div>
+                            <label id="lable" for="post-location">Location last seen</label> </br>
+                            <input type="text" name="post-description" id="post-description" />
+                        </div>
+                        <div>
+                            <label id="lable" for="post-content">Describe your friend</label> </br>
+                            <textarea class="textarea resize-ta"></textarea>
+                            <input type="text" name="post-description" id="post-description" />
+                        </div>
+                        <button class="signupbtn" type="submit" class="btn">Post Animal</button>
+                    </div>
+                </section>
+        </aside>
+
+        <div class="divborder">
+            <button id="upload_widget" class="cloudinary-button">Upload Photo</button>
+            <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+            <script type="text/javascript">
+                var myWidget = cloudinary.createUploadWidget({
+                    cloudName: 'dyz1jgp39',
+                    uploadPreset: 'wpm89gsd'
+                }, (error, result) => {
+                    if (!error && result && result.event === "success") {
+                        console.log('Done! Here is the image info: ', result.info);
+                    }
+                })
+
+                document.getElementById("upload_widget").addEventListener("click", function () {
+                    myWidget.open();
+                }, false);
+                </div >
+            </script>
+
     </form>
-
-    <section class="create-post">
-        <h1>Enter new Profile</h1>
-        <form class="create-post-form">
-            <div>
-                {{!-- <label for="post-title">Who did you lose?</label>
-                <input type="text" name="post-title" id="post-title" /> --}}
-
-
-            </div>
-
-            <form class="create-post-form">
-                <div>
-                    <label for="post-name">Name</label>
-                    <input type="text" name="post-title" id="post-name" />
-                </div>
-                <button id="upload_widget" class="cloudinary-button">Upload Photo</button>
-
-                <div>
-                    <label for="post-location">Location last seen:</label>
-                    <input type="text" name="post-description" id="post-description" />
-                </div>
-                <div>
-                    <label for="post-content">Describe your friend</label>
-                    <input type="text" name="post-description" id="post-description" />
-                </div>
-                <button type="submit" class="btn">Post Animal</button>
-            </form>
-
-        <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
-
-        <script type="text/javascript">
-            var myWidget = cloudinary.createUploadWidget({
-                cloudName: 'dyz1jgp39',
-                uploadPreset: 'wpm89gsd'
-             }, (error, result) => {
-                 if (!error && result && result.event === "success") {
-                     console.log('Done! Here is the image info: ', result.info);
-                }
-            }
-            )
-
-            document.getElementById("upload_widget").addEventListener("click", function () {
-                myWidget.open();
-            }, false);
-        </script>
-
-    </section>
-
 
     <div class="list-posts">
         {{#if posts.length}}
