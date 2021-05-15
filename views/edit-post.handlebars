@@ -4,8 +4,8 @@
             <h2>Edit Post</h2>
             <form class="edit-post-form">
                 <div>
-                    <input type="text" name="post-title" id="edit-post-title" {{post.post_title}}/>
-                    <input type="text" name="post-description" id="edit-post-location"{{post.post_location}}/>
+                    <input type="text" name="post-title" id="edit-post-title" value="{{post.post_title}}"/>
+                    <input type="text" name="post-description" id="edit-post-location" value="{{post.post_location}}"/>
                     <textarea type="text" name="post-text" id="edit-textarea">{{post.post_content}}</textarea>
                     <select id="edit-animalType" {{post.animal_type}}>
                             <option value='Cat'>Cat</option>
