@@ -7,6 +7,7 @@ async function editFormHandler(event) {
     const post_content = document.querySelector('#edit-textarea').value;
     const post_location = document.querySelector(`#edit-post-location`).value.trim();
     const animal_type = document.querySelector(`#edit-animalType`).value.trim();
+    
     console.log(post_title, post_location, post_content, animal_type);
     const id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
