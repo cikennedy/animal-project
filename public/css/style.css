@@ -31,7 +31,8 @@
 }
 
 .searched-post {
-    list-style-type: none;
+  border: solid;
+    /* list-style-type: none;
     background-color: #eaeaea;
     border-radius: 3px;
     padding: 10px 20px;
@@ -42,10 +43,14 @@
         'post_location post_photo'
         'animal_type post_photo'
         'post_content post_photo';
-    text-align: left;
+    text-align: left; */
 }
 
-.searched-post > h2 {
+.searched-pic {
+  height: 100px;
+}
+
+/* .searched-post > h2 {
     grid-area: post_name;
     margin-bottom: 0px;
 }
@@ -71,7 +76,7 @@
 .searched-post > img {
     max-height: 100px;
     grid-area: image;
-}
+} */
 
 #search-bar {
     width: 100%;

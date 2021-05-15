@@ -117,7 +117,7 @@ router.put('/:id', withAuth, (req, res) =>
             post_location: req.body.post_location,
             post_content: req.body.post_content,
             animal_type: req.body.animal_type,
-            post_photo: req.body.picurl
+            post_photo: req.body.picurl,
         },
         {
             where: {
