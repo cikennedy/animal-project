@@ -43,6 +43,70 @@ body {
     height: 100px;
 }
 
+.inputlable {
+  position: relative;
+}
+
+
+.dashboard-view label {
+  font-size: 1rem;
+  border: none;
+  width: 400px;
+}
+
+.dashboard-view input {
+  font-size: 1rem;
+  height: 30px;
+  width: 350px;
+}
+
+.dashboard-view textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 350px;
+  overflow: hidden;
+  resize: vertical;
+  min-height: 40px;
+  line-height: 20px;
+}
+
+.dashboard-view #animalType {
+  width: 235px;
+  height: 30px;
+  font-size: 1rem;
+}
+
+.dashboard-view .uploadbtn {
+  width: 350px;
+  height: 50px;
+  font-size: 1rem;
+  margin-top: 13px;
+  /* padding: 6px 12px 6px 12px; */
+  border: 3px solid #d3f514;
+  color: #161515;
+  display: block;
+}
+
+.dashboard-view .animalsubmitbtn {
+  width: 350px;
+  height: 50px;
+  font-size: 1rem;
+  margin-top: 13px;
+  /* padding: 0px 12px 6px 12px; */
+  border: 5px solid #665544;
+  border-radius: 35px;
+  color: #161515;
+  display: block;
+}
+
+.dashboard-view .uploadimg {
+  height: 300px;
+  margin: 30px 0 0 50px;
+  border-radius: 25px;
+
+}
+
+
 ol {
   
   list-style-type: lower-latin;
