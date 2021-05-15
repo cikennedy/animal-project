@@ -55,7 +55,6 @@ router.get('/edit/:id', withAuth, (req, res) => {
             'post_location',
             'post_content',
             'animal_type',
-            'post_photo',
             'created_at'
         ],
         include: [
