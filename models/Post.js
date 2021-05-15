@@ -17,9 +17,17 @@ Post.init(
             type:DataTypes.STRING,
             allowNull: false,
         },
+        post_location: {
+            type: DataTypes.TEXT,
+            allowNull: false
+        },
         post_content: {
             type: DataTypes.TEXT,
             allowNull: false
+        },
+        animal_type: {
+            type:DataTypes.STRING,
+            allowNull: false,
         },
         post_photo : {
             type: DataTypes.STRING,

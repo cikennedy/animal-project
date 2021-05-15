@@ -11,7 +11,9 @@ router.get('/', withAuth, (req, res) => {
         attributes: [
             'id',
             'post_title',
+            'post_location',
             'post_content',
+            'animal_type',
             'post_photo',
             'created_at'
         ],
@@ -50,7 +52,9 @@ router.get('/edit/:id', withAuth, (req, res) => {
         attributes: [
             'id',
             'post_title',
+            'post_location',
             'post_content',
+            'animal_type',
             'post_photo',
             'created_at'
         ],

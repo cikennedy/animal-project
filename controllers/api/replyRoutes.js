@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
 
 // Post reply 
 router.post('/', (req, res) => {
-        Comment.create({
+        Reply.create({
             reply: req.body.reply,
             post_id: req.body.post_id,
         })

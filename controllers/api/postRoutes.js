@@ -10,7 +10,9 @@ router.get('/', (req, res) => {
         attributes: [
             'id',
             'post_title',
+            'post_location',
             'post_content',
+            'animal_type',
             'post_photo',
             'created_at'
         ],
@@ -49,7 +51,9 @@ router.get('/:id', (req, res) => {
         attributes: [
             'id',
             'post_title',
+            'post_location',
             'post_content',
+            'animal_type',
             'post_photo',
             'created_at'
         ],
@@ -91,7 +95,10 @@ router.post('/', withAuth, (req, res) => {
     // Creates a post with the title, content, and user id
     Post.create({
         post_title: req.body.post_title,
+        post_location: req.body.post_location,
         post_content: req.body.post_content,
+        animal_type: req.body.animal_type,
+        post_photo: req.body.picurl,
         user_id: req.session.user_id
     })
     .then(dbPostData => res.json(dbPostData))
@@ -107,7 +114,10 @@ router.put('/:id', withAuth, (req, res) =>
     Post.update(
         {
             post_title: req.body.post_title,
+            post_location: req.body.post_location,
             post_content: req.body.post_content,
+            animal_type: req.body.animal_type,
+            post_photo: req.body.picurl
         },
         {
             where: {

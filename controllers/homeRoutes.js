@@ -10,7 +10,9 @@ router.get('/', (req, res) => {
       attributes: [
           'id',
           'post_title',
+          'post_location',
           'post_content',
+          'animal_type',
           'post_photo',
           'created_at'
       ],
@@ -55,11 +57,13 @@ router.get('/post/:id', (req, res) => {
       },
       // Same as the get all posts route above 
       attributes: [
-          'id',
-          'post_title',
-          'post_content',
-          'post_photo',
-          'created_at'
+        'id',
+        'post_title',
+        'post_location',
+        'post_content',
+        'animal_type',
+        'post_photo',
+        'created_at'
       ],
       include: [
           {
