@@ -24,6 +24,10 @@
 <body class="container_12 clearfix">
   <header>
     <div>
+      <div class="search-wrapper">
+        <input type="text" name="searchBar" id="search-bar" placeholder="Search for a missing animal"/>
+      </div>
+      <ul id="searched-posts-list"></ul>
       <div>
         <h1>Lost & Found Animals</h1>
       </div>
@@ -109,6 +113,7 @@
       {{/if}}
 
       <script src="/js/modal.js"></script>
+      <script src="/js/search-bar.js"></script>
 
 </body>
 
