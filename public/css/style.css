@@ -43,6 +43,11 @@ body {
     height: 100px;
 }
 
+ol {
+  
+  list-style-type: lower-latin;
+}
+
 li {
     display: inline;
     padding: 5px;

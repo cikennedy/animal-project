@@ -1,8 +1,10 @@
-<section class="login-form">
-<form class="wrapper" class="log-flex-container">
-  <aside>
-    <section class="log-flex-container" class="login-signup">
-      <div class="log-flex-item-left" class="login-form">
+<section class="login-signup">
+
+  <aside class="wrapper log-flex-container">
+   
+    <section class="log-flex-container">
+       <form class="log-flex-container login-form">
+      <div class="log-flex-item-left">
         <div>
           <input type="text" id="email-login" placeholder="Email: " />
         </div>
@@ -13,8 +15,10 @@
           <button class="signupbtn" type="submit">Log In</button>
         </div>
       </div>
+      </form>
 
-      <div class="log-flex-item-right" class="signup-form">
+      <form class='signup-form'>
+      <div class="log-flex-item-right " >
         <div>
           <input type="text" id="name-signup" placeholder="Enter Name" />
         </div>
@@ -28,27 +32,15 @@
           <button class="signupbtn" type="submit">Sign Up</button>
         </div>
       </div>
+      </form>
+  
+
+
+
     </section>
-  </aside>
-
-  <div class="log-flex-container">
-
-    <article>
-      <h1> We can post latest lost animals here</h1>
-      {{{animal}}}
-    </article>
-
-    <article>
-      <h1> We can post latest lost animals here</h1>
+    </aside>
 
 
-    </article>
-
-
-
-  </div>
-
-</form>
 </section>
 
 <script src="/js/login.js"></script>

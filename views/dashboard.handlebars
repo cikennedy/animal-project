@@ -1,25 +1,4 @@
 <section class="dashboard-view">
-
-
-    {{!-- <form class="typeAnimal-form">
-        <section class="create-post">
-
-
-            <div class="dropdown">
-                <button class="dropbtn" onclick="myFunction()">Dropdown
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <select class="dropdown-content" id="myDropdown">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>
-            </div>
-            </script>
-
-        </section>
-    </form> --}}
-
     <form class="wrapper create-post-form">
         <aside id="asidewidth">
             {{!-- <section class="log-flex-container" class="create-post"> --}}
@@ -42,9 +21,14 @@
                         </div>
                         <label>Animal Type</label>
                         <select id="animalType">
-                            <option value='cat'>Cat</option>
-                            <option value='dog'>Dog</option>
-                            <option value='bunny'>Bunny</option>
+                            <option value='Cat'>Cat</option>
+                            <option value='Dog'>Dog</option>
+                            <option value='Rabit'>Bunny</option>
+                            <option value='Bird'>Bunny</option>
+                            <option value='Snake'>Bunny</option>
+                            <option value='Turtle'>Bunny</option>
+                            <option value='Lizard'>Bunny</option>
+                            <option value='Guinea Pig'>Bunny</option>
                         </select>
                         <img id='previewPic'></img>
                         <button class="animalSubmit" type="submit" class="btn">Post Animal</button>
@@ -56,10 +40,11 @@
             <button id="upload_widget" class="cloudinary-button">Upload Photo</button>
             <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
             <script type="text/javascript">
+            var picurl;
             console.log('UPLOAD script code happeing!!')
                 var myWidget = cloudinary.createUploadWidget({
                     cloudName: 'dyz1jgp39',
-                    uploadPreset: 'wpm89gsd'
+                    uploadPreset: 'xg9rbdt3'
                 }, (error, result) => {
                    // console.log('RESULT', result)
                     if (!error && result && result.event === "success") {
@@ -67,6 +52,7 @@
 
                        var pic = document.getElementById('previewPic')
                        pic.setAttribute('src', result.info.secure_url)
+                       picurl =  result.info.secure_url
                     }
                     //console.log('ERRRRRR', error)
                 })

@@ -121,7 +121,7 @@ h1 {
 
 .login-signup {
     overflow: hidden;
-    background-color: grey;
+    /* background-color: grey; */
   }
   
   .login-signup a {

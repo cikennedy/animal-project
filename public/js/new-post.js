@@ -5,6 +5,8 @@ const newPostFormHandler = async (event) => {
     // Gather the data from the form elements on the page
     const post_title = document.querySelector(`#post-name`).value.trim();
     const post_content = document.querySelector(`#post-description`).value.trim();
+
+    console.log('Pic URL!!!',picurl)
     
 
     // Send the post to the server

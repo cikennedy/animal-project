@@ -1,5 +1,6 @@
 // Signup form that is similar to login, but includes email information
 async function signupFormHandler(event) {
+  console.log('WEEEE R CLICKING signup!!!!')
     // Stop the browser from submitting the form so we can do so with JavaScript
     event.preventDefault();
   
