@@ -1,38 +1,42 @@
 <section class="single-post">
     <div class="post-card-content">
-          <section class="edit-post">
+        <section class="edit-post">
             <h2>Edit Post</h2>
             <form class="edit-post-form">
                 <div>
-                    <input type="text" name="post-title" id="edit-post-title" value="{{post.post_title}}"/>
-                    <input type="text" name="post-description" id="edit-post-location" value="{{post.post_location}}"/>
+                    <input type="text" name="post-title" id="edit-post-title" value="{{post.post_title}}" />
+                    <input type="text" name="post-description" id="edit-post-location" value="{{post.post_location}}" />
                     <textarea type="text" name="post-text" id="edit-textarea">{{post.post_content}}</textarea>
                     <select id="edit-animalType" {{post.animal_type}}>
-                            <option value='Cat'>Cat</option>
-                            <option value='Dog'>Dog</option>
-                            <option value='Rabbit'>Bunny</option>
-                            <option value='Bird'>Bunny</option>
-                            <option value='Snake'>Bunny</option>
-                            <option value='Turtle'>Bunny</option>
-                            <option value='Lizard'>Lizard</option>
-                            <option value='Guinea Pig'>Bunny</option>
-                            <option value='Other'>Other</option>
+                        <option value='Cat'>Cat</option>
+                        <option value='Dog'>Dog</option>
+                        <option value='Rabbit'>Bunny</option>
+                        <option value='Bird'>Bunny</option>
+                        <option value='Snake'>Bunny</option>
+                        <option value='Turtle'>Bunny</option>
+                        <option value='Lizard'>Lizard</option>
+                        <option value='Guinea Pig'>Bunny</option>
+                        <option value='Other'>Other</option>
                     </select>
                 </div>
                 <div>
-               <a href="post/{{post.id}}" class="nav-link">{{post.comments.length}}</a>
-            </div>
+                    <a href="post/{{post.id}}" class="nav-link">{{post.comments.length}}</a>
+                </div>
+                <img id="previewPic" src={{post.post_photo}}></img>
                 <button type="submit" class="btn save-btn">Save Post</button>
                 <button type="button" class="btn delete-btn">Delete Post</button>
+                <div>
+                    <button class="uploadbtn" id="upload_widget" class="cloudinary-button">Upload Photo</button>
+                </div>
             </form>
         </section>
     </div>
 
-     {{> replies post.replies}}
-     
+    {{> replies post.replies}}
+
 </section>
 
 
-
+<script src='/js/photo-upload.js'></script>
 <script src="/js/edit-post.js"></script>
 <script src="/js/delete-post.js"></script>

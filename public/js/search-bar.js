@@ -1,27 +1,15 @@
-const searchPostsList = document.getElementById('#searched-posts-list');
-const searchBar = document.getElementById('#search-bar');
+const searchPostsList = document.getElementById('searched-posts-list');
+const searchBar = document.getElementById('search-bar');
 let animalPosts = [];
+console.log('search barrrr', searchBar)
 
-searchBar.addEventListener('keyup', (e) => {
-    const searchString = e.target.value.toLowerCase();
-    const filteredPosts = animalPosts.filter((post) => {
-        return (
-            post.post_name.toLowerCase().includes(searchString) ||
 
-            post.post_location.toLowerCase().includes(searchString) ||
-
-            post.animal_type.toLowerCase().includes(searchString) ||
-
-            post.post_content.toLowerCase().includes(searchString)
-        );
-    });
-    displayPosts(filteredPosts);
-});
 
 const loadPosts = async () => {
     try {
         const res = await fetch('/api/posts');
-        let animalPosts = await res.json();
+        animalPosts = await res.json();
+        console.log('ANIMAL POSTS!!!!!', animalPosts)
         displayPosts(animalPosts);
         console.log(animalPosts);
     } catch (err) {
@@ -33,16 +21,27 @@ const displayPosts = (posts) => {
     const htmlString = posts.map((post) => {
         return `
         <li class="searched-post">
-            <h2>${post.post_name}</h2>
+            <h2>${post.post_title}</h2>
             <p>${post.post_location}</p>
             <p>${post.animal_type}</p>
             <p>${post.post_content}</p>
-            <img src="${post.post_photo}></img>
+            <img class='searched-pic' src=${post.post_photo}></img>
         </li>
             `;
     })
     .join('');
     searchPostsList.innerHTML = htmlString;
 };
+
+searchBar.addEventListener('keyup', (e) => {
+    const searchString = e.target.value.toLowerCase();
+    console.log('search term!!!!', searchString)
+    console.log('animalPosts', animalPosts)
+
+    const filteredPosts = animalPosts.filter((post) => {
+        return post.post_title.toLowerCase().includes(searchString) || post.post_location.toLowerCase().includes(searchString) || post.animal_type.toLowerCase().includes(searchString) || post.post_content.toLowerCase().includes(searchString)
+    });
+    displayPosts(filteredPosts);
+});
 
 loadPosts();
