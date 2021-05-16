@@ -127,5 +127,10 @@ router.get('/contact', (req, res) => {
     res.render('contact');
 });
 
+router.get('/search', (req, res) => {
+
+    res.render('search');
+});
+
 module.exports = router;
 

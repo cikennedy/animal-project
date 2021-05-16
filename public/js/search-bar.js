@@ -3,8 +3,6 @@ const searchBar = document.getElementById('search-bar');
 let animalPosts = [];
 console.log('search barrrr', searchBar)
 
-
-
 const loadPosts = async () => {
     try {
         const res = await fetch('/api/posts');

@@ -25,10 +25,6 @@
 <body class="container_12 clearfix">
   <header>
     <div>
-      <div class="search-wrapper">
-        <input type="text" name="searchBar" id="search-bar" placeholder="Search for a missing animal"/>
-      </div>
-      <ul id="searched-posts-list"></ul>
       <div>
         <h1>Lost & Found Animals</h1>
       </div>
@@ -36,6 +32,7 @@
       {{#if loggedIn}}
       <div class="topnav" id="myTopnav">
         <a href="/"><button>Home</button></a>
+        <a href="/search"><button id="search">Search</button></a>
         <a href="/dashboard"><button>Dashboard</button></a>
         <a href="/about"><button id="about">About</button></a>
         <a href="/contact"><button id="contact">Contact</button></a>
@@ -64,6 +61,7 @@
 
       <div class="topnav" id="myTopnav">
         <a href="/"><button class="btn-LF">Home</button></a>
+        <a href="/search"><button id="search">Search</button></a>
         <a href="/about"><button id="about">About</button></a>
         <a href="/contact"><button id="contact">Contact</button></a>
         <a href="/login"><button id="login">Log In</button></a>
@@ -114,7 +112,6 @@
       {{/if}}
 
       <script src="/js/modal.js"></script>
-      <script src="/js/search-bar.js"></script>
 
 </body>
 
