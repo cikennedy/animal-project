@@ -4,14 +4,15 @@
    
   
  <!-- The div contains the pet name as the header followed by the blog post content itself -->
-    <li class="homepage-posts">
-      <h2 class="post-title">{{post_title}}</h2> 
-      <p>{{post_content}}</p>
-      <p>{{post.post_location}}</p>
-      <p>{{animal_type}}</p>
-      <p>{{post_content}}</p>
+    <ul class="homepage-posts">
+    <li>
+      <h2 class="post-title">Name: {{post_title}}</h2> 
+      <p>Location: {{post.post_location}}</p>
+      <p>Type of Animal: {{animal_type}}</p>
+      <p>Description: {{post_content}}</p>
       <img class='homepage-pic' src={{post_photo}}></img>
     </li>
+    </ul>
 
     <div class="post-card-user-info">
         <!-- Displays the date the blog was posted with a line break -->

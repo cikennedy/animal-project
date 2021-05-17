@@ -19,10 +19,10 @@ const displayPosts = (posts) => {
     const htmlString = posts.map((post) => {
         return `
         <li class="searched-post">
-            <h2>${post.post_title}</h2>
-            <p>${post.post_location}</p>
-            <p>${post.animal_type}</p>
-            <p>${post.post_content}</p>
+            <h2>Name: ${post.post_title}</h2>
+            <p>Location: ${post.post_location}</p>
+            <p>Type of Animal: ${post.animal_type}</p>
+            <p>Description: ${post.post_content}</p>
             <img class='searched-pic' src=${post.post_photo}></img>
         </li>
             `;
