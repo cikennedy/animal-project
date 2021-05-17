@@ -1,5 +1,5 @@
 :root {
-    --primary: rgb(0, 0, 255);
+    --primary: rgb(32, 32, 89);
     --secondary: #f5a25d;
     --tertiary: #fa7f72;
     --quatrinary: #86f30a;
@@ -22,6 +22,17 @@
     max-width: 1000px;
     text-align: center;
 } */
+
+#home-btn, #search-btn, #dash-btn, #about-btn, #contact-btn, #login-btn #logout-btn {
+  background-color: var(--primary);
+  padding: 12px 12px 12px 12px;
+  color: var(--light);
+  font-size: .95rem;
+  font-weight: bold;
+  border: 2px solid var(--dark);
+  cursor: pointer;
+  border-radius: 12px;
+}
 
 #searched-posts-list {
     padding-inline-start: 0;

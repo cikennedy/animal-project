@@ -31,13 +31,13 @@
 
       {{#if loggedIn}}
       <div class="topnav" id="myTopnav">
-        <a href="/"><button>Home</button></a>
-        <a href="/search"><button id="search">Search</button></a>
-        <a href="/dashboard"><button>Dashboard</button></a>
-        <a href="/about"><button id="about">About</button></a>
-        <a href="/contact"><button id="contact">Contact</button></a>
-        <a><button class="btn" id="logout">Log Out</button></a>
-        <a><button class="modualButton" id="open"> Contact </button></a>
+        <a href="/"><button id="home-btn">Home</button></a>
+        <a href="/search"><button id="search-btn">Search</button></a>
+        <a href="/dashboard"><button id="dash-btn">Dashboard</button></a>
+        <a href="/about"><button id="about-btn">About</button></a>
+        <a href="/contact"><button id="contact-btn">Contact</button></a>
+        <a><button id="logout-btn">Log Out</button></a>
+        {{!-- <a><button class="modualButton" id="open"> Contact </button></a> --}}
         <!--Button for Modal-->
 
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -46,7 +46,7 @@
       </div>
 
       <!-- Modal Code -->
-      <div class="modal-container" id="myModal">
+      {{!-- <div class="modal-container" id="myModal">
         <div class="modal">
           <h1>Contact Information</h1>
           <p>
@@ -55,16 +55,16 @@
           </p>
           <button id="close"> Close </button>
         </div>
-      </div>
+      </div> --}}
 
       {{else}}
 
       <div class="topnav" id="myTopnav">
-        <a href="/"><button class="btn-LF">Home</button></a>
-        <a href="/search"><button id="search">Search</button></a>
-        <a href="/about"><button id="about">About</button></a>
-        <a href="/contact"><button id="contact">Contact</button></a>
-        <a href="/login"><button id="login">Log In</button></a>
+        <a href="/"><button id="home-btn" class="btn-LF">Home</button></a>
+        <a href="/search"><button id="search-btn">Search</button></a>
+        <a href="/about"><button id="about-btn">About</button></a>
+        <a href="/contact"><button id="contact-btn">Contact</button></a>
+        <a href="/login"><button id="login-btn">Log In</button></a>
         {{!-- <a><button class="modualButton" id="open"> Contact </button></a> --}}
         <!--Button for Modal-->
 
