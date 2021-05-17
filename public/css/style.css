@@ -32,6 +32,8 @@
 
 .searched-post {
   border: solid;
+  display: block;
+  padding: 5px;
     /* list-style-type: none;
     background-color: #eaeaea;
     border-radius: 3px;
@@ -48,6 +50,12 @@
 
 .searched-pic {
   height: 100px;
+}
+
+.homepage-post {
+  border: solid;
+  display: block;
+  padding: 5px;
 }
 
 /* .searched-post > h2 {
@@ -189,16 +197,14 @@ body {
 
 }
 
-
 ol {
-  
   list-style-type: lower-latin;
 }
 
-li {
+/* li {
     display: inline;
     padding: 5px;
-}
+} */
 
 
   /* header {
