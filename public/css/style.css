@@ -23,7 +23,7 @@
     text-align: center;
 } */
 
-#home-btn, #search-btn, #dash-btn, #about-btn, #contact-btn, #login-btn #logout-btn {
+button {
   background-color: var(--primary);
   padding: 12px 12px 12px 12px;
   color: var(--light);
@@ -32,6 +32,10 @@
   border: 2px solid var(--dark);
   cursor: pointer;
   border-radius: 12px;
+}
+
+.all-homepage-posts {
+  display: inline-block;
 }
 
 #searched-posts-list {
