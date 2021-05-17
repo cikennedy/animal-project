@@ -35,7 +35,20 @@ button {
 }
 
 .all-homepage-posts {
-  display: inline-block;
+  padding-inline-start: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
+}
+
+.homepage-post {
+  border: solid;
+  display: block;
+  padding: 5px;
+}
+
+.homepage-pic {
+  height: 100px;
 }
 
 #searched-posts-list {
@@ -67,11 +80,6 @@ button {
   height: 100px;
 }
 
-.homepage-post {
-  border: solid;
-  display: block;
-  padding: 5px;
-}
 
 /* .searched-post > h2 {
     grid-area: post_name;

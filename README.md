@@ -1,44 +1,50 @@
 # Lost and Found
 
+# Tech Blog
+
 ## Description
 
-Home Page: 
+This application is a CMS-style blog that features blogs on the home page that features blogs posted on the site by its users. Users can post, edit, delete, and comment on in order to share useful information about technology with one another. 
 
-* Search bar (will search our database that is created from user input)
-    * Parameters: Type of animal, age, color, weight, description 
+* [GitHub Repository](https://github.com/cikennedy/project-2)
 
-* List of missing animal posts with images, description, and contact information 
+* [Deployed Application](https://peaceful-scrubland-23571.herokuapp.com/)
 
-* Button with a reply to the owner 
+## Table of Contents
 
+* [Installation](#installation)
+* [Usage](#usage)
+* [Questions](#questions)
 
-## User Story
+## Installation
 
+This application will work in the web browser.  
 
-// /* 
+## Usage 
 
-// Cloud Name: dyz1jgp39
-// API Key: 167558493262488
+This application primarily utilizes the following technologies: 
 
-// Install: 
-
-// $ npm install cloudinary
-
-// Include the blow variable: 
-
-// var cloudinary = require('cloudinary').v2;;
-
-// Sample Cloudinary image upload code: 
-
-// cloudinary.uploader.upload("sample.jpg", 
-// {"crop":"limit","tags":"samples","width":3000,"height":2000}, 
-// function(result) { console.log(result) });
-
-// Sample image manipulation code: 
-// cloudinary.image("sample", 
-// {"crop":"fill","gravity":"faces","width":300,"height":200,
-// "format":"jpg"});
-
-// */
+* JavaScript
+* Node.js
+* Express.js
+* Handlebars.js
+* MySQL
+* Sequelize 
+* bcrypt 
+* dotenv
+* HTML
+* CSS
 
 
+![Home Page]()
+
+![Log In]()
+
+![Dashboard Blogs]()
+
+![Post]()
+
+
+## Questions
+
+Please feel free to contact me at [Kennedy.ChristopherIan@gmail.com](mailto:kennedy.christopherian@gmail.com) if you have any questions about this project. 
