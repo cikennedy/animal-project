@@ -15,6 +15,9 @@
     display: block;
   }
 
+  #previewPic {
+    max-width: 450px;
+  }
   /* */
   /* .container {
     padding: 40px;
@@ -146,6 +149,15 @@ button {
 body {
   min-width: 960px;
 }
+
+.edit-btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* #previewPic {
+  float: right;
+  height: 300px;
+} */
 
   #nav, #feature, .article, #footer {
     background-color: #efefef;
