@@ -36,13 +36,8 @@ This application primarily utilizes the following technologies:
 * CSS
 
 
-![Home Page]()
+![Screenshot](assets/Screenshot.png)
 
-![Log In]()
-
-![Dashboard Blogs]()
-
-![Post]()
 
 
 ## Questions
