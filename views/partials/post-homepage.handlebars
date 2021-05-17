@@ -4,13 +4,13 @@
    
   
  <!-- The div contains the pet name as the header followed by the blog post content itself -->
-    <ul class="homepage-posts">
-    <li>
+    <ul id="searched-posts-list">
+    <li class="searched-post">
       <h2 class="post-title">Name: {{post_title}}</h2> 
       <p>Location: {{post.post_location}}</p>
       <p>Type of Animal: {{animal_type}}</p>
       <p>Description: {{post_content}}</p>
-      <img class='homepage-pic' src={{post_photo}}></img>
+      <img class='searched-pic' src={{post_photo}}></img>
     </li>
     </ul>
 

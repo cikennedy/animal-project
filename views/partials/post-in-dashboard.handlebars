@@ -1,4 +1,5 @@
-<li class="post-dashboard">
+<ul id="searched-posts-list">
+<li class="searched-post">
 <!-- Displays the link to edit post by ID -->
   <a href='/dashboard/edit/{{id}}' class='edit-post'>Edit Post</a>
 
@@ -8,7 +9,34 @@
         <h2 class='dash-posts-name'>Name: {{post_title}}</h2>
         <span class="post-date">Posted On: {{dateFormat created_at}}</span>
     </div>
-    <img src={{post_photo}}>
+    <img class='searched-pic' src={{post_photo}}>
     </div>
   </a>
 </li>
+</ul>
+
+<div class="all-homepage-posts">
+<!-- The contents of the post card links to the post page using the post ID -->
+  <a href="/post/{{id}}" class="post-card">
+   
+  
+ <!-- The div contains the pet name as the header followed by the blog post content itself -->
+    <ul id="searched-posts-list">
+    <li class="searched-post">
+      <h2 class="post-title">Name: {{post_title}}</h2> 
+      <p>Location: {{post.post_location}}</p>
+      <p>Type of Animal: {{animal_type}}</p>
+      <p>Description: {{post_content}}</p>
+      <img class='searched-pic' src={{post_photo}}></img>
+    </li>
+    </ul>
+
+    <div class="post-card-user-info">
+        <!-- Displays the date the blog was posted with a line break -->
+        <div class="post-date">Posted on: {{dateFormat created_at}}</div><br>
+        <!-- Displays the user who posted the blog post -->
+        <div class="post-user">By: {{user.name}}</div> 
+        <div class="post-comments">Comments: {{replies.length}}</div>
+    </div>
+  </a>
+  </div>
