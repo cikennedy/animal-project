@@ -1,5 +1,8 @@
+// Declare variable for the uploaded photo's absolute path
 var picurl;
-console.log('UPLOAD script code happeing!!')
+console.log('Upload script code happening!')
+    // Cloudinary code containing cloud name and preset. This information can 
+    // also be stored in the .env file 
     var myWidget = cloudinary.createUploadWidget({
         cloudName: 'dyz1jgp39',
         uploadPreset: 'xg9rbdt3'
@@ -17,7 +20,7 @@ console.log('UPLOAD script code happeing!!')
 
     document.getElementById("upload_widget").addEventListener("click", function (event) {
         event.preventDefault()
-        console.log('UPload image clicked!!!')
+        console.log('Upload image clicked!')
         myWidget.open();
     }, false);
    

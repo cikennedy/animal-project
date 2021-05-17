@@ -9,7 +9,7 @@ async function replyFormHandler(event) {
         window.location.toString().split('/').length - 1
     ];
   
-    if (comment_content) {
+    if (reply) {
       // Send the comment to the server
       const response = await fetch('/api/replies', {
         method: 'POST',
@@ -26,4 +26,4 @@ async function replyFormHandler(event) {
     }
   };
 
-document.querySelector('.reply-form').addEventListener('submit', commentFormHandler);
+document.querySelector('.reply-form').addEventListener('submit', replyFormHandler);
