@@ -16,7 +16,7 @@
         <!-- Displays the date the blog was posted with a line break -->
         <div class="post-date">Posted on: {{dateFormat created_at}}</div><br>
         <!-- Displays the user who posted the blog post -->
-        <div class="post-user">By: {{user.name}}</div> 
+        <div class="post-user">By: {{user.owner_name}}</div> 
         <div class="post-comments">Comments: {{replies.length}}</div>
     </div>
   {{!-- </a> --}}
