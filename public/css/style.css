@@ -74,7 +74,7 @@ button {
 .homepage-list {
   margin: 5px 0 5px 0;
   padding-left: 15px;
-  border: 5px solid blue;
+  border: 5px solid var(--dark);
   width: 40%;
   display: block;
   padding: 5px;
@@ -83,7 +83,7 @@ button {
 .searched-post {
   margin: 5px 0 5px 0;
   padding-left: 15px;
-  border: 5px solid blue;
+  /* border: 5px solid var(--dark); */
   display: block;
   padding: 5px;
     /* list-style-type: none;
