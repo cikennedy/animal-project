@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, Reply } = require('../models');
+const { Post, Reply, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Find lost and found posts by the user that is logged in
@@ -26,6 +26,10 @@ router.get('/', withAuth, (req, res) => {
                     'post_id',
                     'created_at'
                 ],
+                include: {
+                    model: User,
+                    attributes: ['owner_name']
+                }
             },
         ]
     })
@@ -67,6 +71,10 @@ router.get('/edit/:id', withAuth, (req, res) => {
                     'post_id',
                     'created_at'
                 ],
+                include: {
+                    model: User,
+                    attributes: ['owner_name']
+                }
             },
         ]
     })

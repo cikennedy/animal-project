@@ -31,6 +31,10 @@ router.get('/', (req, res) => {
                     'post_id',
                     'created_at'
                 ],
+                include: {
+                    model: User,
+                    attributes: ['owner_name']
+                }
             }
         ]
     })
@@ -72,6 +76,10 @@ router.get('/:id', (req, res) => {
                     'post_id',
                     'created_at'
                 ],
+                include: {
+                    model: User,
+                    attributes: ['owner_name']
+                }
             }
         ]
     })
