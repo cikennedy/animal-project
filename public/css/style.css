@@ -66,19 +66,19 @@ button {
   height: 100px;
 }
 
-.post-list {
+.post-list, #searched-posts-list {
     padding-inline-start: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 20px;
 }
 
-#searched-posts-list {
+/* #searched-posts-list {
   padding-inline-start: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 20px;
-}
+} */
 
 .homepage-post-list {
   margin: 5px 0 5px 0;
@@ -100,8 +100,7 @@ button {
   padding-left: 15px;
   border: 5px solid var(--dark);
   display: grid;
-  /* display: block; */
-  padding: 5px;
+  /* padding: 5px; */
     /* list-style-type: none;
     background-color: #eaeaea;
     border-radius: 3px;
