@@ -19,7 +19,7 @@ const displayPosts = (posts) => {
     const htmlString = posts.map((post) => {
         return `
         <li class="searched-post">
-            <a href=/post/${post.id}>View Post<a>
+            <a class= "view-post-link" href=/post/${post.id}>View Post<a>
             <h2>Name: ${post.post_title}</h2>
             <p>Location: ${post.post_location}</p>
             <p>Type of Animal: ${post.animal_type}</p>
