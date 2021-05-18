@@ -45,6 +45,15 @@ button {
   /* border: 3px solid ;
 } */
 
+#searched-posts-list li a {
+  color: var(--primary);
+  text-decoration: (none);
+}
+
+#searched-posts-list li a:hover {
+  color: goldenrod;
+}
+
 .homepage-post {
   border: solid;
   display: block;
