@@ -8,7 +8,7 @@ This application is a CMS-style blog that features blogs on the home page that f
 
 * [GitHub Repository](https://github.com/cikennedy/project-2)
 
-* [Deployed Application](https://peaceful-scrubland-23571.herokuapp.com/)
+* [Deployed Application](https://findmymissingpet.herokuapp.com/dashboard)
 
 ## Table of Contents
 
@@ -36,13 +36,8 @@ This application primarily utilizes the following technologies:
 * CSS
 
 
-![Home Page]()
+![Screenshot](assets/Screenshot.png)
 
-![Log In]()
-
-![Dashboard Blogs]()
-
-![Post]()
 
 
 ## Questions

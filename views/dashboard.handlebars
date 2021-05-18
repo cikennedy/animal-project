@@ -32,7 +32,6 @@
                         <div>
                            <button class="uploadbtn" id="upload_widget" class="cloudinary-button">Upload Photo</button>
                         </div>
-                        {{!-- <img id='previewPic'></img> --}}
                         <div>
                         <button class="animalsubmitbtn" type="submit" class="btn">Post Animal</button>
                         </div>
@@ -46,7 +45,7 @@
     </form>
     <div class="list-posts">
         {{#if posts.length}}
-        <h1>Your Lost and Found Posts</h1>
+        <h1>Your Find My Pet Posts</h1>
         <ol>
             {{#each posts as |post|}}
             {{> post-in-dashboard post}}
