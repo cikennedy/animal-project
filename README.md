@@ -1,10 +1,8 @@
 # Lost and Found
 
-# Tech Blog
-
 ## Description
 
-This application is a CMS-style blog that features blogs on the home page that features blogs posted on the site by its users. Users can post, edit, delete, and comment on in order to share useful information about technology with one another. 
+This is a full-stack application that helps pet owners locate their lost pets. The homepage features posts of missing animals. Users can post, edit, delete, and comment on posts in order to help better locate missing pets. 
 
 * [GitHub Repository](https://github.com/cikennedy/project-2)
 
