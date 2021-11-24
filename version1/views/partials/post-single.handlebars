@@ -1,0 +1,17 @@
+<section class="single-post">
+    <div class="post-card-content">
+      <h2 class="post-title">{{post_title}}</h2> 
+      <p>Animal Type: {{animal_type}}</p>
+      <p>Description: {{post_content}}</p>
+      <p>Last known location: {{post_location}}</p>
+      <img src={{post_photo}}>
+    </div>
+
+    <div class="post-card-user-info">
+        <!-- Displays the date the blog was posted with a line break -->
+        <span class="post-date">Posted on: {{dateFormat created_at}}</span><br>
+        <!-- Displays the user who posted the blog post -->
+        <span class="post-user">By: {{user.owner_name}}</span> 
+        <p>{{replies.length}}</p>
+    </div>
+</section>

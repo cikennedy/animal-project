@@ -1,43 +1,34 @@
-# Lost and Found
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Description
+## Getting Started
 
-This is a full-stack application that helps pet owners locate their lost pets. The homepage features posts of missing animals. Users can post, edit, delete, and comment on posts in order to help better locate missing pets. 
+First, run the development server:
 
-* [GitHub Repository](https://github.com/cikennedy/project-2)
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-* [Deployed Application](https://findmymissingpet.herokuapp.com/dashboard)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Table of Contents
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-* [Installation](#installation)
-* [Usage](#usage)
-* [Questions](#questions)
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-## Installation
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This application will work in the web browser.  
+## Learn More
 
-## Usage 
+To learn more about Next.js, take a look at the following resources:
 
-This application primarily utilizes the following technologies: 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-* JavaScript
-* Node.js
-* Express.js
-* Handlebars.js
-* MySQL
-* Sequelize 
-* bcrypt 
-* dotenv
-* HTML
-* CSS
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
+## Deploy on Vercel
 
-![Screenshot](assets/Screenshot.png)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-
-
-## Questions
-
-Please feel free to contact me at [Kennedy.ChristopherIan@gmail.com](mailto:kennedy.christopherian@gmail.com) if you have any questions about this project. 
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

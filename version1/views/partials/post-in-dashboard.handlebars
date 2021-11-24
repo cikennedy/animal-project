@@ -1,0 +1,15 @@
+<ul id="searched-posts-list">
+<li class="searched-post">
+<!-- Displays the link to edit post by ID -->
+  <a href='/dashboard/edit/{{id}}' class='edit-post'>Edit Post</a>
+  <a href='/post/{{id}}' class='dash-posts'>
+    <div class='dash-posts-wrapper'>
+    <div class='dash-posts-info'>
+        <h2 class='dash-posts-name'>Name: {{post_title}}</h2>
+        <span class="post-date">Posted On: {{dateFormat created_at}}</span>
+    </div>
+    <img class='searched-pic' src={{post_photo}}>
+    </div>
+  </a>
+</li>
+</ul>

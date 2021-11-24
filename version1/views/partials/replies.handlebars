@@ -1,0 +1,14 @@
+<div class="replies">
+    {{#each this}}
+    
+        <div class="reply-ctr">
+           Reply Date: {{dateFormat created_at}}
+        </div>
+   
+        <div class="reply-content">
+        {{reply}}
+        </div>
+
+    {{/each}}
+
+</div>

@@ -1,0 +1,94 @@
+{{!-- <section class="dashboard-view">
+    <div class="post-card-content">
+        <section class="edit-post">
+            <h2>Edit Post</h2>
+            <form class="edit-post-form">
+                <div>
+                    <input type="text" name="post-title" id="edit-post-title" value="{{post.post_title}}" />
+                    <input type="text" name="post-description" id="edit-post-location" value="{{post.post_location}}" />
+                    <textarea type="text" name="post-text" id="edit-textarea">{{post.post_content}}</textarea>
+                    <select id="edit-animalType" {{post.animal_type}}>
+                        <option value='Cat'>Cat</option>
+                        <option value='Dog'>Dog</option>
+                        <option value='Rabbit'>Rabbit</option>
+                        <option value='Bird'>Bird</option>
+                        <option value='Snake'>Snake</option>
+                        <option value='Turtle'>Turtle</option>
+                        <option value='Lizard'>Lizard</option>
+                        <option value='Guinea Pig'>Guinea Pig</option>
+                        <option value='Other'>Other</option>
+                    </select>
+                </div>
+                <div>
+                    <a href="post/{{post.id}}" class="nav-link">{{post.replies.length}}</a>
+                </div>
+                <img id="previewPic" src={{post.post_photo}}></img>
+                <button type="submit" class="btn save-btn">Save Post</button>
+                <button type="button" class="btn delete-btn">Delete Post</button>
+                <div>
+                    <button class="uploadbtn" id="upload_widget" class="cloudinary-button">Upload Photo</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    {{> replies post.replies}}
+
+</section> --}}
+
+
+<section class="dashboard-view">
+    <form class="edit-post-form wrapper">
+        <aside id="asidewidth">
+                <section>
+                    <div>
+                        <div>
+                            <label for="post-name">Missing Pet's Name: </label> </br>
+                            <input type="text" name="post-title" id="edit-post-title" value="{{post.post_title}}"/>
+                        </div>
+                        <div>
+                            <label for="post-location">Last known location: </label> </br>
+                            <input type="text" name="post-description" id="edit-post-location" value="{{post.post_location}}" />
+                        </div>
+                        <div>
+                            <label for="post-content">Describe your missing pet: </label> </br>
+                            <textarea class="resize-ta" id="edit-textarea">{{post.post_content}}</textarea>
+                        </div>
+                        <div>
+                            <label class="label">Animal Type</label>
+                            <select id="edit-animalType">
+                                <option value='Cat'>Cat</option>
+                                <option value='Dog'>Dog</option>
+                                <option value='Rabbit'>Rabbit</option>
+                                <option value='Bird'>Bird</option>
+                                <option value='Snake'>Snake</option>
+                                <option value='Turtle'>Turtle</option>
+                                <option value='Lizard'>Lizard</option>
+                                <option value='Guinea Pig'>Guinea Pig</option>
+                                <option value='Other'>Other</option>
+                            </select>
+                        </div>
+                     
+                        <div>
+                        <button class="uploadbtn" id="upload_widget" class="cloudinary-button">Upload Photo</button>
+                        </div>
+                        <button type="submit" class="edit-btn save-btn">Save Post</button>
+                        <button type="button" class="edit-btn delete-btn">Delete Post</button>
+                    
+
+                       {{> replies post.replies}}
+
+                <section>
+        </aside>
+
+            <div class="divborder">
+            <div> <img src={{post.post_photo}} class="uploadimg" id='previewPic'></img> </div>           
+            </div>
+
+</form>
+</section>
+           {{!-- <img id="previewPic" src={{post.post_photo}}></img> --}}
+
+<script src='/js/photo-upload.js'></script>
+<script src="/js/edit-post.js"></script>
+<script src="/js/delete-post.js"></script>

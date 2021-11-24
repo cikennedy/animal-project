@@ -1,0 +1,60 @@
+<section class="dashboard-view">
+    <form class="wrapper create-post-form">
+        <aside id="asidewidth">
+                <section>
+                    <div>
+                        <div>
+                            <label for="post-name">Missing Pet's Name: </label> </br>
+                            <input type="text" name="post-title" id="post-name" />
+                        </div>
+                        <div>
+                            <label for="post-location">Last known location: </label> </br>
+                            <input type="text" name="post-description" id="post-location" />
+                        </div>
+                        <div>
+                            <label for="post-content">Describe your missing pet: </label> </br>
+                            <textarea class="resize-ta" id="post-description"></textarea>
+                        </div>
+                        <div>
+                            <label class="lable">Animal Type</label>
+                            <select id="animalType">
+                                <option value='Cat'>Cat</option>
+                                <option value='Dog'>Dog</option>
+                                <option value='Rabbit'>Rabbit</option>
+                                <option value='Bird'>Bird</option>
+                                <option value='Snake'>Snake</option>
+                                <option value='Turtle'>Turtle</option>
+                                <option value='Lizard'>Lizard</option>
+                                <option value='Guinea Pig'>Guinea Pig</option>
+                                <option value='Other'>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                           <button class="uploadbtn" id="upload_widget" class="cloudinary-button">Upload Photo</button>
+                        </div>
+                        <div>
+                        <button class="animalsubmitbtn" type="submit" class="btn">Post Animal</button>
+                        </div>
+                    </div>
+                </section>
+        </aside>
+
+        <div class="divborder">
+            <div> <img class="uploadimg" id='previewPic'></img> </div>           
+ </div>
+    </form>
+    <div class="list-posts">
+        {{#if posts.length}}
+        <h1>Your Find My Pet Posts</h1>
+        <ol>
+            {{#each posts as |post|}}
+            {{> post-in-dashboard post}}
+            {{/each}}
+        </ol>
+        {{/if}}
+    </div>
+
+</section>
+
+<script src="/js/photo-upload.js"></script>
+<script src="/js/new-post.js"></script>

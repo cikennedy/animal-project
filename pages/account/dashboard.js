@@ -1,0 +1,1 @@
+// include user's posts (new post, edit post, delete post), replies, link to sign out, link to account details

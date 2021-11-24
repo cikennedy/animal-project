@@ -1,0 +1,47 @@
+<div class="all-homepage-posts">
+<!-- The contents of the post card links to the post page using the post ID -->
+
+ <!-- The div contains the pet name as the header followed by the blog post content itself -->
+    <ul id="homepage-post-list">
+    <li class="homepage-post">
+      <a class= "view-post-link" href="/post/{{id}}" class="post-card">View Post</a>
+      <h2 class="post-title">Name: {{post_title}}</h2> 
+      <p>Last known location: {{post_location}}</p>
+      <p>Type of Animal: {{animal_type}}</p>
+      <p>Description: {{post_content}}</p>
+      <img class='searched-pic' src={{post_photo}}></img>
+    </li>
+    </ul>
+    <div class="post-card-user-info">
+        <!-- Displays the date the blog was posted with a line break -->
+        <div class="post-date">Posted on: {{dateFormat created_at}}</div><br>
+        <!-- Displays the user who posted the blog post -->
+        <div class="post-user">By: {{user.owner_name}}</div> 
+        <div class="post-comments">Comments: {{replies.length}}</div>
+    </div>
+  {{!-- </a> --}}
+  </div>
+
+{{!-- <div class="all-homepage-posts">
+
+</div>
+        <ul id="searched-posts-list">
+          <li>
+            <a href="/post/{{id}}" class="post-card">View Post</a>
+            <h2 class="post-date">Posted on: {{dateFormat created_at}}</h2>
+            <h3 class="post-user">By: {{user.name}}</h3>
+            <h3 class="post-comments">Comments: {{replies.length}}</h3>
+            <h2 class="post-title">Name: {{post_title}}</h2>
+            <p>Location: {{post.post_location}}</p>
+            <p>Type of Animal: {{animal_type}}</p>
+            <p>Description: {{post_content}}</p>
+            <img class='searched-pic' src={{post_photo}}></img>
+          </li>
+        </ul>
+
+</div> --}}
+
+
+
+
+

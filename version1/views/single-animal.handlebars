@@ -1,0 +1,20 @@
+<section class="single-post">
+
+    {{> post-single post}}
+
+    <form class="reply-form">
+        <div>
+            <textarea id="reply-body" placeholder="Enter Comment"></textarea>
+        </div>
+
+        <div>
+            <button class="reply-btn" type="submit">Post Reply</button>
+        </div>
+    </form>
+
+    {{> replies post.replies}}
+
+    </section>
+    
+    <script src="/js/reply.js"></script>
+    

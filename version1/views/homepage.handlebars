@@ -1,0 +1,15 @@
+<div class="post-list"> 
+
+{{#each posts as |post|}}
+
+<div class="homepage-list">
+{{> post-homepage post}}
+</div>
+
+{{else}}
+<h4>
+    No lost and found posts available to be displayed.
+</h4> 
+
+{{/each}}
+</div>
