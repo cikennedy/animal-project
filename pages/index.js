@@ -1,21 +1,20 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import Layout, { siteTitle } from '../components/layout'
+// import Image from 'next/image'
+// import Link from 'next/link'
+// import Layout, { siteTitle } from '../components/layout'
+import { Navbar } from '../components/Navbar';
+import { Footer } from '../components/Footer';
 
 export default function Home() {
   return (
-    <Layout home>
+    <div>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Create Next App</title>
+        <link rel='icon' href='/favicon.ico' />
       </Head>
-      <section>
-        <p>[Your Self Introduction]</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
-      </section>
-    </Layout>
-  )
+      <Navbar />
+      <div>Hello World</div>
+      <Footer />
+    </div>
+  );
 }
