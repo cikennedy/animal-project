@@ -1,6 +1,6 @@
-import { NextApiHandler } from 'next'
-import Filter from 'bad-words'
-import { query } from '../../lib/db'
+import { NextApiHandler } from 'next';
+import Filter from 'bad-words';
+import { query } from '../../lib/db';
 
 const filter = new Filter()
 
